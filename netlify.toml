@@ -1,0 +1,5 @@
+[build]
+    command = "gatsby build"
+	funtions = "./funtions"
+[build.enviroment]
+    GO_IMPORT_PATH = "github.com/asdromundo/asdrome.digital"
