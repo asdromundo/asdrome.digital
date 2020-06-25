@@ -31,8 +31,8 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © asdrome {new Date().getFullYear()}, Hecho con
+        <footer style={{textAlign: `center`}}>
+          © <b>asdrome</b> {new Date().getFullYear()}. Hecho con
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>

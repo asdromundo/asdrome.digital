@@ -5,7 +5,7 @@ export default function BlogContainer({ children }) {
     <div
       style={{
         margin: `3rem auto`,
-        maxWidth: `700px`,
+        maxWidth: `800px`,
         padding: `0 1rem`,
       }}
     >
