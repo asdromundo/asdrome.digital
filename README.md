@@ -1,99 +1,97 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+---
+title: "asdrome.digital README.md file"
+date: "2020-06-25"
+path: "/readme"
+---
+# asdrome.digital
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+Esta es una página sobre tecnología, estilo de vida y conexión con la era digítal. Esta basada en la idea de hacer accesible la tecnología para todos. 
+> "Educación, comunidad, igualdad y diversión."
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+Esta disponible con la licencia MIT, así que eres libre de clonar el repositorio.
 
-## 🚀 Quick start
+## Página
 
-1.  **Create a Gatsby site.**
+Puedes visitar la página en [asdrome.digital][webpage] para ver las últimas novedades.
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+Sí te interesa saber cómo fue hecha puedes analizar los paquetes disponibles en [GitHub][repositorio].
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+También puedes jugar con ella al clonarla con (previa instalación de [Git](https://git-scm.com)):
 
-1.  **Start developing.**
+```bash
+git clone https://github.com/asdromundo/asdrome.digital
+```
+Vas a necesitar las siguientes herramientas:
 
-    Navigate into your new site’s directory and start it up.
+* [Gatsby.js][gatsby]
+* Gatsby, a su vez, funciona sobre [nvm][nvm] y [node][node].
+* Un navegador web compatible con HTML5.
+* Un gestor de paquetes de node: [yarn](https://yarnpkg.com) o [npm](https://www.npmjs.com). Me gusta más yarn.
+* Un editor de texto. Puede ser desde Block de notas hasta un IDE. Personalmente usé [Visual Studio Code][vscode].
+* Mucha curiosidad.
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+## Uso
 
-1.  **Open the source code and start editing!**
+Así que valientemente decidiste intentar correr esta página por tu cuenta, muy bien.
+Para asegurarte de que tienes lo necesario puedes revisar el tutorial de [Gatsby](https://www.gatsbyjs.org/tutorial/part-zero/) por lo menos en lo referente a instalación.
+Asumiremos en lo consecuente que la instalación de las herramientas fue correcta.
 
-    Your site is now running at `http://localhost:8000`!
+En una terminal (de aquí en adelante CMD, BASh o cualquier otra será denominada terminal sencillamente) muévete al directorio que clonaste.
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+En sistemas UNIX, eso se ve así:
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+```bash
+cd [RUTA_AL_DIRECTORIO_DONDE_USASTE_EL_COMANDO]/asdrome.digital
+```
+Puedes ver los archivos existentes en el directorio con _ls_ o sí estas un directorio arriba:
 
-## 🧐 What's inside?
+```bash
+ls asdrome.digital/
+```
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+Asumiendo que instalaste _yarn_ (sí preferiste npm, pensaré que sabes lo que haces) es necesario actualizar los módulos de la carpeta con lo que debería incluir:
+```bash
+yarn
+```
+Va a descargar los paquetes necesarios según el archivo _yarn.lock_ o package.json (sí usas npm) en la carpeta _node_modules_.
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+Ahora al usar _ls_ deberías tener lo siguiente:
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+```bash
+$ ls -1
+gatsby-browser.js
+gatsby-config.js
+gatsby-node.js
+LICENSE
+netlify.toml
+node_modules
+package.json
+README.md
+src
+yarn.lock
+```
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+Con eso deberías estar listo para correr la página localmente con:
+```bash
+gatsby develop
+```
+¿Funcionó? Sí es así la consola debería mostrarte que Gatsby esta corriendo en _localhost:8000_. ¿Qué significa eso? Abre tu navegador e ingresa eso en la barra de búsqueda.
+Al dar enter deberías ver exactamente lo mismo que la página principal de [asdrome.digital][webpage].
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+¡Felicidades! Ahora puedes modificar los archivos para hacer que [asdrome.digital][webpage] quede a tu gusto.
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+## Modificando la página
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+Please make sure to update tests as appropriate.
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+## License
+[Licencia MIT][MIT]
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
-
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+[nvm]: https://github.com/nvm-sh/nvm
+[gatsby]: https://www.gatsbyjs.org
+[MIT]: https://choosealicense.com/licenses/mit/
+[repositorio]: https://github.com/asdromundo/asdrome.digital
+[webpage]: https://asdrome.digital
+[node]: https://nodejs.org/es
+[vscode]: https://code.visualstudio.com
