@@ -5,9 +5,9 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
+import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import React from "react"
 
 import Header from "./header"
 
@@ -24,9 +24,14 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div style={{}}>
+      <div
+        style={{
+          margin: `3rem auto`,
+          padding: `0 1rem`,
+        }}
+      >
         <main>{children}</main>
-        <footer style={{ textAlign: `center` }}>
+        <footer style={{textAlign: `center`}}>
           © <b>asdrome</b> {new Date().getFullYear()}. Hecho con
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
