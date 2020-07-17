@@ -28,7 +28,7 @@ const BlogPosts = () => {
             <Link to={`${node.frontmatter.path}`}>{node.frontmatter.title} </Link>
             <span
               style={{
-                
+                color: `#bbb`,
               }}
             >
               - {node.frontmatter.date}
