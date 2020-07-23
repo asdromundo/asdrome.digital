@@ -1,22 +1,25 @@
-import { Link } from "gatsby"
+import { Link, useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
-import { rhythm } from "../utils/typography"
+import { useColorMode, Button } from "theme-ui"
+import Img from "gatsby-image"
+import { graphql } from "gatsby"
 
-//import Logo from "./logo.js"
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 
 const ListLink = props => (
   <li
-    style={{
-      display: `inline-block`,
-      marginRight: `1rem`,
-      color: `white`,
+    sx={{
+      display: "inline-block",
+      marginRight: "0.5rem",
     }}
   >
     <Link
-      style={{
-        textDecoration: `none`,
-        fontSize: `1.5rem`,
+      sx={{
+        fontWeight: "bold",
+        color: "white",
+        textDecoration: "none",
+        fontSize: "4vw",
       }}
       to={props.to}
     >
@@ -25,27 +28,62 @@ const ListLink = props => (
   </li>
 )
 
+const ThemeButton = props => {
+  const data = useStaticQuery(graphql`
+  query {
+    file(relativePath: { eq: "images/logo128.png" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fixed(width: 40, height: 40) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+  `)
+  const [colorMode, setColorMode] = useColorMode()
+  return (
+    <Button
+      sx={{
+        backgroundColor: "transparent",
+        display: "inline-block",
+        border: "none",
+        verticalAlign: "sub"
+      }}
+      onClick={e => {
+        setColorMode(colorMode === "dark" ? "default" : "dark")
+      }}
+    >
+      <Img fixed={data.file.childImageSharp.fixed} alt="Dark mode" />
+      {/* {colorMode === "default" ? "Dark" : "Light"} */}
+    </Button>
+  )
+}
+
 const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      margin: `0 auto`,
-      padding: `${rhythm(2)}`,
-      paddingTop: `${rhythm(1.5)}`,
+  <header
+    sx={{
+      fontSize: "3vw",
+      fontFamily: "heading",
+      background: "#121212",
+      position: "fixed",
+      top: "0",
+      right: "0",
+      left: "0",
     }}
   >
     <Link
       to="/"
-      style={{
-        textShadow: `none`,
-        backgroundImage: `none`,
-        color: `white`,
-        textDecoration: `none`,
+      sx={{
+        textDecoration: "none",
       }}
     >
       <h1
-        style={{
-          marginLeft: `2rem`,
-          display: `inline`,
+        sx={{
+          color: "white",
+          marginLeft: ".5em",
+          display: "inline",
         }}
       >
         {siteTitle}
@@ -53,16 +91,18 @@ const Header = ({ siteTitle }) => (
     </Link>
 
     <ul
-      style={{
-        listStyle: `none`,
-        float: `right`,
-        marginTop: `0.5rem`,
+      sx={{
+        display: "inline-block",
+        textAlign: "right",
+        position: "relative",
+        left: "15vw"
       }}
     >
       <ListLink to="/about/">Acerca</ListLink>
       <ListLink to="/contact/">Contacto</ListLink>
+      <ThemeButton />
     </ul>
-  </div>
+  </header>
 )
 
 Header.propTypes = {
