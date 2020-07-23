@@ -1,58 +1,79 @@
 {
-    "name": "asdrome.digital",
-    "private": true,
-    "description": "Tecnología, Vida, Diversión. Para todos.",
-    "version": "0.1.9",
-    "author": "Antonio S. Dromundo E. <sebastiandromundo@outlook.com> @asdromundo",
-    "keywords": [
-        "gatsby"
-    ],
-    "license": "MIT",
-    "scripts": {
-        "build": "gatsby build",
-        "develop": "gatsby develop",
-        "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-        "start": "npm run develop",
-        "serve": "gatsby serve",
-        "clean": "gatsby clean",
-        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-    },
-    "homepage": "https://asdrome.digital",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/asdromundo/asdrome.digital"
-    },
-    "bugs": {
-        "url": "https://github.com/asdromundo/asdrome.digital/issues"
-    },
-    "dependencies": {
-        "@theme-ui/typography": "^0.3.0",
-        "gatsby": "^2.23.10",
-        "gatsby-image": "^2.4.9",
-        "gatsby-plugin-manifest": "^2.4.14",
-        "gatsby-plugin-offline": "^3.2.13",
-        "gatsby-plugin-react-helmet": "^3.3.6",
-        "gatsby-plugin-sharp": "^2.6.14",
-        "gatsby-plugin-theme-ui": "^0.3.0",
-        "gatsby-source-filesystem": "^2.3.14",
-        "gatsby-theme-ui": "^0.2.0",
-        "gatsby-transformer-remark": "^2.8.19",
-        "gatsby-transformer-sharp": "^2.5.7",
-        "react": "^16.12.0",
-        "react-dom": "^16.12.0",
-        "react-helmet": "^6.1.0",
-        "react-refresh": "^0.8.3",
-        "react-typography": "^0.16.19",
-        "theme-ui": "^0.3.1",
-        "typography": "^0.16.19",
-        "typography-theme-ocean-beach": "^0.16.19"
-    },
-    "devDependencies": {
-        "prettier": "2.0.5"
-    },
-    "peerDependencies": {
-        "@theme-ui": "^0.1.2",
-        "react-refresh": "^0.8.2",
-        "typescript": "^2.8.0"
+  "name": "asdrome.digital",
+  "private": true,
+  "description": "",
+  "version": "2.0.1",
+  "author": "Antonio S. Dromundo <sebastiandromundo AT outlook DOT com> (https://asdromundo.github.com)",
+  "bugs": {
+    "url": "https://github.com/asdromundo/asdrome.digital/issues"
+  },
+  "dependencies": {
+    "gatsby": "^2.24.10",
+    "gatsby-image": "^2.0.41",
+    "gatsby-plugin-feed": "^2.5.11",
+    "gatsby-plugin-google-analytics": "^2.0.19",
+    "gatsby-plugin-manifest": "^2.4.20",
+    "gatsby-plugin-netlify": "^2.3.11",
+    "gatsby-plugin-offline": "^3.2.13",
+    "gatsby-plugin-postcss": "^2.0.7",
+    "gatsby-plugin-purgecss": "^3.1.1",
+    "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-sharp": "^2.6.21",
+    "gatsby-remark-copy-linked-files": "^2.0.12",
+    "gatsby-remark-images": "^2.0.6",
+    "gatsby-remark-prismjs": "^3.3.20",
+    "gatsby-remark-responsive-iframe": "^2.1.1",
+    "gatsby-remark-smartypants": "^2.0.9",
+    "gatsby-source-filesystem": "^2.3.14",
+    "gatsby-transformer-remark": "^2.8.19",
+    "gatsby-transformer-sharp": "^2.5.11",
+    "prismjs": "^1.16.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^6.1.0",
+    "react-refresh": "^0.8.2",
+    "typeface-alegreya": "^0.0.69",
+    "typeface-merriweather": "0.0.72",
+    "typeface-montserrat": "0.0.54",
+    "typeface-nunito": "^0.0.72",
+    "typescript": ">=2.8.0",
+    "url-join": "^4.0.0",
+    "webpack": ">=4.4.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "husky": "^2.2.0",
+    "postcss-color-function": "^4.1.0",
+    "postcss-custom-properties": "^8.0.10",
+    "postcss-easy-import": "^3.0.0",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^1.10.0"
+  },
+  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "keywords": [
+    "gatsby",
+    "ghost",
+    "gallery",
+    "blog"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/asdromundo/asdrome.digital"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
     }
+  }
 }

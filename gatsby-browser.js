@@ -1,9 +1,5 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
- 
-// You can delete this file if you're not using it
-
-//require('./src/styles/global.css')
+// custom typefaces
+import "typeface-montserrat"
+import "typeface-merriweather"
+import "typeface-nunito"
+import "typeface-alegreya"
