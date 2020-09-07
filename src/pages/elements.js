@@ -13,9 +13,7 @@ const ElementsPage = ({ data }, location) => {
 
   return (
     <Layout title={siteTitle}>
-      <SEO
-        title="Elements"
-      />
+      <SEO title="Elements" />
 
       <article className="post-content page-template no-image">
         <div className="post-content-body">
@@ -365,15 +363,26 @@ const ElementsPage = ({ data }, location) => {
           <h2 id="code">Code</h2>
           <pre>
             <code>
-              i = <span style={{color: "rgb(191,90,242)"}}>0</span>;{"\n"}
-              {"\n"}<span style={{color: "rgb(10,132,255)"}}>while</span> (!deck.<span style={{color: "rgb(255,214,10)"}}>isInOrder</span>()) {"{"}
+              i = <span style={{ color: "rgb(191,90,242)" }}>0</span>;{"\n"}
               {"\n"}
-              {"    "}print <span style={{color: "rgb(50,215,75)"}}>'Iteration '</span> + i;{"\n"}
-              {"    "}deck.<span style={{color: "rgb(255,214,10)"}}>shuffle</span>();{"\n"}
+              <span style={{ color: "rgb(10,132,255)" }}>while</span> (!deck.
+              <span style={{ color: "rgb(255,214,10)" }}>isInOrder</span>()){" "}
+              {"{"}
+              {"\n"}
+              {"    "}print{" "}
+              <span style={{ color: "rgb(50,215,75)" }}>'Iteration '</span> + i;
+              {"\n"}
+              {"    "}deck.
+              <span style={{ color: "rgb(255,214,10)" }}>shuffle</span>();{"\n"}
               {"    "}i++;{"\n"}
               {"}"}
               {"\n"}
-              {"\n"}print <span style={{color: "rgb(50,215,75)"}}>'It took '</span> + i + <span style={{color: "rgb(50,215,75)"}}>' iterations to sort the deck.'</span>;
+              {"\n"}print{" "}
+              <span style={{ color: "rgb(50,215,75)" }}>'It took '</span> + i +{" "}
+              <span style={{ color: "rgb(50,215,75)" }}>
+                ' iterations to sort the deck.'
+              </span>
+              ;
             </code>
           </pre>
           <h2 id="grid-system">Grid system</h2>
@@ -532,25 +541,21 @@ const indexQuery = graphql`
         title
       }
     }
-    smallPic: file(
-      relativePath: { eq: "fabio-comparelli-696506-unsplash.jpg" }
-    ) {
+    smallPic: file(relativePath: { eq: "escritorio01.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1360) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    medPic: file(relativePath: { eq: "sophia-valkova-30139-unsplash.jpg" }) {
+    medPic: file(relativePath: { eq: "fondo-negro01.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1360) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    largePic: file(
-      relativePath: { eq: "vladimir-malyutin-98174-unsplash.jpg" }
-    ) {
+    largePic: file(relativePath: { eq: "workspace01.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1360) {
           ...GatsbyImageSharpFluid
@@ -560,10 +565,10 @@ const indexQuery = graphql`
   }
 `
 
-export default props => (
+export default (props) => (
   <StaticQuery
     query={indexQuery}
-    render={data => (
+    render={(data) => (
       <ElementsPage location={props.location} data={data} {...props} />
     )}
   />

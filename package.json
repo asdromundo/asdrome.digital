@@ -2,7 +2,7 @@
   "name": "asdrome.digital",
   "private": true,
   "description": "",
-  "version": "2.0.1",
+  "version": "2.1.2",
   "author": "Antonio S. Dromundo <sebastiandromundo AT outlook DOT com> (https://asdromundo.github.com)",
   "bugs": {
     "url": "https://github.com/asdromundo/asdrome.digital/issues"
@@ -75,5 +75,6 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
-  }
+  },
+    "browserslist": [">0.25%", "not dead"]
 }
