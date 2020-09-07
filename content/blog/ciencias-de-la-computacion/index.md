@@ -1,8 +1,8 @@
 ---
-title: Darkness
-date: "2019-05-08"
-thumbnail: ./bbbb.jpg
-description: Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.
+title: Ciencias de la Computación
+date: "2020-09-07"
+thumbnail: ./darkness.jpg
+description: Las Ciencias de la Computación son una de las áreas más importantes de la actualidad. La mayor parte de tus electrónicos favoritos existen gracias a ellas. Aún así es problable que no las conozcas ¿Por qué?
 ---
 
 ### A wallpaper series using shapes and light by [Jean-Marc Denis](http://jmd.im/black)
