@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const Layout = props => {
+const Layout = (props) => {
   const { title, children } = props
   const [toggleNav, setToggleNav] = React.useState(false)
   return (
@@ -9,7 +9,7 @@ const Layout = props => {
       <header className="site-head">
         <div className="site-head-container">
           <a
-            href="#"
+            href="/#"
             className="nav-burger"
             onClick={() => setToggleNav(!toggleNav)}
           >
@@ -25,20 +25,17 @@ const Layout = props => {
             </div>
           </a>
           <nav id="swup" class="site-head-left">
-            <ul className="nav" role="menu">
-              {/* <li className="nav-home nav-current" role="menuitem">
-                <Link to={`/`}>Home</Link>
-              </li> */}
-              <li className="nav-about" role="menuitem">
+            <div className="nav" role="menu">
+              <a href="/#" className="nav-about" role="menuitem">
                 <Link to={`/about`}>Acerca de</Link>
-              </li>
-              <li className="nav-elements" role="menuitem">
+              </a>
+              <a href="/#" className="nav-elements" role="menuitem">
                 <Link to={`/elements`}>Elementos</Link>
-              </li>
-              <li className="nav-tags" role="menuitem">
+              </a>
+              <a href="/#" className="nav-tags" role="menuitem">
                 <Link to={`/tags`}>Categorías</Link>
-              </li>
-            </ul>
+              </a>
+            </div>
           </nav>
           <div className="site-head-center">
             <Link className="site-head-logo" to={`/`}>

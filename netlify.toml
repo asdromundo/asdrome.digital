@@ -1,8 +1,10 @@
  [build]
+  base = "/"
   command = "gatsby build"
-  functions = "functions"
-  publish = "public"
+  functions = "functions/"
+  publish = "public/"
+  
 
 [build.environment]
-  GO_IMPORT_PATH = "github.com/asdromundo/test-asdrome-digital"
+  GO_IMPORT_PATH = "github.com/asdromundo/asdrome-digital"
 

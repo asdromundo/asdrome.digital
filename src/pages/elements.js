@@ -40,7 +40,7 @@ const ElementsPage = ({ data }, location) => {
             <code>
               for (;;) {"{"} ... {"}"}
             </code>
-            . Finally, this is a <a href="#">link</a>.
+            . Finally, this is a <a href="/#">link</a>.
           </p>
           <h2 id="heading-level-2">Heading Level 2</h2>
           <h3 id="heading-level-3">Heading Level 3</h3>
@@ -202,53 +202,53 @@ const ElementsPage = ({ data }, location) => {
           <h2 id="buttons">Buttons</h2>
           <ul className="actions">
             <li>
-              <a href="#" className="button primary">
+              <a href="/#" className="button primary">
                 Primary
               </a>
             </li>
             <li>
-              <a href="#" className="button">
+              <a href="/#" className="button">
                 Default
               </a>
             </li>
           </ul>
           <ul className="actions">
             <li>
-              <a href="#" className="button primary large">
+              <a href="/#" className="button primary large">
                 Large
               </a>
             </li>
             <li>
-              <a href="#" className="button">
+              <a href="/#" className="button">
                 Default
               </a>
             </li>
             <li>
-              <a href="#" className="button small">
+              <a href="/#" className="button small">
                 Small
               </a>
             </li>
           </ul>
           <ul className="actions fit">
             <li>
-              <a href="#" className="button primary fit">
+              <a href="/#" className="button primary fit">
                 Fit
               </a>
             </li>
             <li>
-              <a href="#" className="button fit">
+              <a href="/#" className="button fit">
                 Fit
               </a>
             </li>
           </ul>
           <ul className="actions fit small">
             <li>
-              <a href="#" className="button primary fit small">
+              <a href="/#" className="button primary fit small">
                 Fit + Small
               </a>
             </li>
             <li>
-              <a href="#" className="button fit small">
+              <a href="/#" className="button fit small">
                 Fit + Small
               </a>
             </li>
@@ -366,8 +366,9 @@ const ElementsPage = ({ data }, location) => {
               i = <span style={{ color: "rgb(191,90,242)" }}>0</span>;{"\n"}
               {"\n"}
               <span style={{ color: "rgb(10,132,255)" }}>while</span> (!deck.
-              <span style={{ color: "rgb(255,214,10)" }}>isInOrder</span>()){" "}
-              {"{"}
+              <span style={{ color: "rgb(255,214,10)" }}>
+                isInOrder
+              </span>()) {"{"}
               {"\n"}
               {"    "}print{" "}
               <span style={{ color: "rgb(50,215,75)" }}>'Iteration '</span> + i;

@@ -13,7 +13,7 @@ function Bio() {
   return (
     <StaticQuery
       query={bioQuery}
-      render={data => {
+      render={(data) => {
         const { author, social } = data.site.siteMetadata
         return (
           <section>
@@ -25,9 +25,10 @@ function Bio() {
               }}
             />
             <p>
-              Página hecha por Antonio Sebastián Dromundo Escobedo, puedes seguirme en: 
+              Página hecha por Antonio Sebastián Dromundo Escobedo, puedes
+              seguirme en:
               <a href={`https://twitter.com/${social.twitter}`}>
-                 "@asdromundo"
+                "@asdromundo"
               </a>
             </p>
           </section>

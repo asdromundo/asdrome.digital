@@ -27,6 +27,12 @@ class BlogPostTemplate extends React.Component {
             <p class="post-content-excerpt">{post.frontmatter.description}</p>
           )}
 
+          {post.frontmatter.author && (
+            <p class="post-content-excerpt">Por: {post.frontmatter.author}</p>
+          )}
+
+          <p>Tiempo estimado de lectura: {post.timeToRead ** 2} minuto(s).</p>
+
           {post.frontmatter.thumbnail && (
             <div className="post-content-image">
               <Img
@@ -68,8 +74,10 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      timeToRead
       frontmatter {
         title
+        author
         date(formatString: "MMMM DD, YYYY")
         description
         thumbnail {

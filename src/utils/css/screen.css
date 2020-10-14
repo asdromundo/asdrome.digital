@@ -161,13 +161,15 @@ body {
   list-style: none;
 }
 
-.site-head li {
+.site-head-left a {
   display: block;
   margin: 0;
-  padding: 0;
+  padding: 10px 8px;
+  color: var(--color-base);
+  font-weight: 600;
+  opacity: 0.6;
 }
 
-.site-head-left a,
 .site-head-right a {
   display: block;
   margin: 0;
